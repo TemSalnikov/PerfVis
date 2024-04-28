@@ -1,0 +1,64 @@
+#YAML
+version: 1.0
+config:
+  driver:
+    model:
+      name: 
+        - rpi    #rpi, modbus, s7
+    connect:
+      type: gpio #gpio, tcp, rtu
+      s7:
+        ip: 
+          - '192.168.1.1'
+        port:
+          - 1102
+        rack:
+          - 0
+        slot:
+          - 0
+      modbus:
+        tcp:
+          ip: 
+          - '192.168.1.1'
+          port:
+            - 1102
+        rtu:
+          com:
+            - 1
+          bod:
+            - 9600  
+      gpio: 
+        num: 
+          - 23
+          - 24
+        type:
+          - d_in      #discret_in 
+          - a_in      #analog_in
+    data:
+      s7:
+        db_num:
+          - 0
+          - 1
+        data_addr:      #положение в списке соответствует №DB в списке db_num
+          - 0
+          - 1
+      modbus:
+        reg_addr:
+          - 0
+        reg_num:
+          - 1
+      gpio:
+        d_in:
+          type:
+            - speed   # speed, count, flow_rate
+          mul:
+            - 1
+          div: 
+            - 1
+          offset:
+            - 0
+
+      
+      
+      
+
