@@ -1,0 +1,19 @@
+#YAML
+version: 1.0
+config:
+  provider:
+    - short_name: ''
+      description: ''
+      connection:
+        - short_name: ''
+          description: ''
+          type: modbus_tcp  # modbus_tcp, s7
+          ip: '192.168.1.1'
+          port: 502
+          rack: 0
+          slot: 0
+      data:
+        - short_name: ''
+          description: ''
+          block_addr: 0   #for s7: data block number; for mofbus: register address;
+          reg_addr: 0     #for s7: variable addres in data block; for mofbus: number of registers;

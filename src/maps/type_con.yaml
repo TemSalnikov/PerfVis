@@ -1,0 +1,5 @@
+#YAML
+version: 1.0
+type_con:
+  - s7
+  - modbus_tcp
